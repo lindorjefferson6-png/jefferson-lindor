@@ -1,0 +1,585 @@
+
+/* STYLE GENERAL DU SITE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #243247;
+    line-height: 1.7;
+}
+
+/* EN-TETE */
+header {
+    background-color: #102b46;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+    color: #d5e4f0;
+}
+
+/* CONTENU PRINCIPAL */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 35px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    color: #102b46;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #176b87;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 25px;
+    margin-bottom: 25px;
+}
+
+/* BOUTON */
+button {
+    background-color: #176b87;
+    color: white;
+    border: none;
+    padding: 13px 22px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #102b46;
+}
+
+/* PIED DE PAGE */
+footer {
+    text-align: center;
+    padding: 25px 15px;
+    color: #64748b;
+}
+
+/* ADAPTATION AUX TELEPHONES */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    main {
+        margin: 20px 12px;
+        padding: 22px;
+    }
+}
+
+/* MENU DE NAVIGATION */
+.navbar {
+    background-color: #ffffff;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    color: #102b46;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #243247;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #176b87;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 14px;
+    }
+}
+
+/* SECTION D'ACCUEIL */
+.hero {
+    background: linear-gradient(135deg, #102b46, #176b87);
+    color: white;
+    padding: 75px 25px;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.hero-label {
+    color: #b8e3f0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    color: white;
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.hero-label) {
+    font-size: 17px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: white;
+    color: #102b46;
+    padding: 14px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background-color: #e3f1f7;
+}
+
+@media (max-width: 600px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+}
+
+/* CATALOGUE DES FORMATIONS */
+.formations-section {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-label {
+    color: #176b87;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.formations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.formation-card {
+    background: white;
+    padding: 26px;
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.formation-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.formation-card h3 {
+    margin: 0 0 12px;
+}
+
+.formation-card p {
+    margin-bottom: 15px;
+}
+
+.formation-level {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.formation-button {
+    display: inline-block;
+    margin-top: auto;
+    padding: 11px 14px;
+    background: #176b87;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.formation-button:hover {
+    background: #102b46;
+}
+
+@media (max-width: 800px) {
+    .formations-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .formations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+}
+
+/* Section Contact */
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f4f7fb;
+}
+
+.contact-section h2 {
+    color: #123b68;
+    margin-bottom: 15px;
+}
+
+.contact-section > p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.contact-info {
+    margin-bottom: 25px;
+}
+
+.contact-form {
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ccd4df;
+    border-radius: 6px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    padding: 14px;
+    background-color: #123b68;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.contact-form button:hover {
+    background-color: #1d568f;
+}
+
+/* Adaptation aux téléphones et tablettes */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .formations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section {
+        padding: 40px 15px;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 23px;
+    }
+
+    .formation-card {
+        padding: 18px;
+    }
+}
+
+/* Pied de page */
+.site-footer {
+    background-color: #123b68;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+.site-footer h3 {
+    margin-bottom: 10px;
+}
+
+.site-footer p {
+    line-height: 1.6;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+/* Amélioration de la section À propos */
+.apropos-competences {
+    max-width: 850px;
+    margin: 35px auto;
+    padding: 25px;
+    background-color: #f4f7fb;
+    border-radius: 12px;
+    border-left: 5px solid #123b68;
+}
+
+.apropos-competences h3 {
+    color: #123b68;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.apropos-competences ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.apropos-competences li {
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #e0e6ef;
+    line-height: 1.6;
+}
+
+.apropos-competences li::before {
+    content: "✓ ";
+    color: #123b68;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .apropos-competences {
+        padding: 18px;
+        margin: 25px 10px;
+    }
+
+    .apropos-competences h3 {
+        font-size: 20px;
+    }
+}
+
+/* Bouton de téléchargement du CV */
+.cv-button-container {
+    text-align: center;
+    margin: 30px auto;
+}
+
+.cv-button {
+    display: inline-block;
+    padding: 14px 25px;
+    background-color: #123b68;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cv-button:hover {
+    background-color: #1d568f;
+}
+
+.formation-card ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.formation-card li {
+    margin-bottom: 8px;
+}
+
+.formation-button {
+    display: inline-block;
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.formation-button:hover {
+    background-color: #084298;
+}
+
+.inscription-container {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.inscription-container h3 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 10px;
+}
+
+.inscription-container > p {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.inscription-form .form-group {
+    margin-bottom: 18px;
+}
+
+.inscription-form label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: bold;
+}
+
+.inscription-form input,
+.inscription-form select,
+.inscription-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.inscription-form input:focus,
+.inscription-form select:focus,
+.inscription-form textarea:focus {
+    outline: 2px solid #0d6efd;
+    border-color: #0d6efd;
+}
+
+.inscription-button {
+    width: 100%;
+    padding: 13px;
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.inscription-button:hover {
+    background-color: #084298;
+}
